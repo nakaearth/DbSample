@@ -1,0 +1,4 @@
+09-18 18:59:34 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: テーブル "TEST" が見つかりません
+Table "TEST" not found; SQL statement:
+Select * from TEST [42102-173]
