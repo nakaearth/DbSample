@@ -15,6 +15,9 @@ public class MyBatisSample {
 		for(Test test : list) {
 			System.out.println("Name:" + test.getName());
 		}
+		System.out.println("-----2回目---------");
+		for(Test test : list) {
+			System.out.println("Name:" + test.getName());
+		}
 	}
-
 }
