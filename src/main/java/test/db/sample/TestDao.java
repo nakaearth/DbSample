@@ -31,6 +31,7 @@ public class TestDao {
 		test.setId(id);
 		test.setName(name);
 		mapper.save(test);
+		session.commit();
 		session.close();
 	}
 	
@@ -38,6 +39,7 @@ public class TestDao {
 		SqlSession session = sessionFactory.openSession();
 		TestMapper mapper = session.getMapper(TestMapper.class);
 		mapper.delete(id);
+		session.commit();
 		session.close();
 	}
 }
