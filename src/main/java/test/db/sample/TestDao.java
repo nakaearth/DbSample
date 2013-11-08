@@ -23,4 +23,21 @@ public class TestDao {
 
 		return list;
 	}
+	
+	public void save(Integer id, String name) {
+		SqlSession session = sessionFactory.openSession();
+		TestMapper mapper = session.getMapper(TestMapper.class);
+		Test test = new Test();
+		test.setId(id);
+		test.setName(name);
+		mapper.save(test);
+		session.close();
+	}
+	
+	public void delete(Integer id) {
+		SqlSession session = sessionFactory.openSession();
+		TestMapper mapper = session.getMapper(TestMapper.class);
+		mapper.delete(id);
+		session.close();
+	}
 }

@@ -7,9 +7,20 @@
 		<id property="id" column="ID" />
 		<result property="name" column="名称" />
 	</resultMap>
+	<parameterMap type="Test" id="testParameter">
+		<parameter property="id"/>
+		<parameter property="name"/>
+	</parameterMap>
 
 	<cache type="org.mybatis.caches.oscache.OSCache" />
+	
 	<select id="selectAll" resultMap="testResultMap">
 		SELECT * FROM TEST
 	</select>
+	<insert id="save" parameterType="Test">
+	    INSERT INTO TEST(id, name) VALUES(#{id}, #{name})
+	</insert>
+	<delete id="delete" parameterType="int">
+	    DELETE FROM TEST WHERE ID = #{id}
+	</delete>
 </mapper>

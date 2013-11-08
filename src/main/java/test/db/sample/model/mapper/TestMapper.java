@@ -6,5 +6,6 @@ import test.db.sample.model.Test;
 
 public interface TestMapper {
 	  List<Test> selectAll();
-
+	  void save(Test test);
+	  void delete(Integer id);
 }
