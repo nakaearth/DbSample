@@ -8,4 +8,7 @@ public interface TestMapper {
 	  List<Test> selectAll();
 	  void save(Test test);
 	  void delete(Integer id);
+	  void deleteAll();
+	  
+	  void update(Integer id, String name);
 }

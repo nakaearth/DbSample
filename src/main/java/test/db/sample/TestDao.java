@@ -42,4 +42,18 @@ public class TestDao {
 		session.commit();
 		session.close();
 	}
+	
+	public void deleteAll() {
+		SqlSession session = sessionFactory.openSession();
+		TestMapper mapper = session.getMapper(TestMapper.class);
+		mapper.deleteAll();
+		session.commit();
+		session.close();
+	}
+	
+	public void update(Integer id, String name) {
+		SqlSession session = sessionFactory.openSession();
+		TestMapper mapper = session.getMapper(TestMapper.class);
+		// TODO TestMapperのupdateメソッドを完成させてここにupdate処理を追加してください。
+	}
 }

@@ -23,4 +23,12 @@
 	<delete id="delete" parameterType="int">
 	    DELETE FROM TEST WHERE ID = #{id}
 	</delete>
+	
+	<delete id="deleteAll" >
+	    DELETE FROM TEST
+	</delete>
+	
+	<update id="update" parameterType="Test">
+	
+	</update>
 </mapper>

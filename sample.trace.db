@@ -2,3 +2,27 @@
 org.h2.jdbc.JdbcSQLException: テーブル "TEST" が見つかりません
 Table "TEST" not found; SQL statement:
 Select * from TEST [42102-173]
+11-13 18:16:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: オブジェクトはすでに閉じられています
+The object is already closed [90007-174]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.message.DbException.get(DbException.java:138)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1410)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1388)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:265)
+	at test.db.sample.JdbcSample.insert(JdbcSample.java:44)
+	at test.db.sample.JdbcSample.main(JdbcSample.java:22)
+11-13 18:17:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: オブジェクトはすでに閉じられています
+The object is already closed [90007-174]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.message.DbException.get(DbException.java:138)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1410)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1388)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:265)
+	at test.db.sample.JdbcSample.insert(JdbcSample.java:44)
+	at test.db.sample.JdbcSample.main(JdbcSample.java:22)
