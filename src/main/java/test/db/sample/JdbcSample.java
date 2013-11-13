@@ -23,6 +23,8 @@ public class JdbcSample {
 		
 			select(conn);
 			
+			update(conn);
+			
 			delete(conn);
 			conn.close();
 		} catch (SQLException e) {
