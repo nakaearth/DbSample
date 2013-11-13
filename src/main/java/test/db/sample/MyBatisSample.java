@@ -11,7 +11,7 @@ public class MyBatisSample {
 	 */
 	public static void main(String[] args) {
 		TestDao dao = new TestDao();
-		dao.save(Integer.valueOf(1), "test");
+		dao.save(Integer.valueOf(2), "test");
 		
 		List<Test> list = new TestDao().all();
 		for(Test test : list) {
@@ -26,7 +26,7 @@ public class MyBatisSample {
 //			System.out.println("------------------------");
 //		}
 		
-		new TestDao().delete(Integer.valueOf(1));
+		new TestDao().delete(Integer.valueOf(2));
 		list = new TestDao().all();
 		for(Test test : list) {
 			System.out.println("Name:" + test.getName());
