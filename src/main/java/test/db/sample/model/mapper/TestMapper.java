@@ -10,5 +10,5 @@ public interface TestMapper {
 	  void delete(Integer id);
 	  void deleteAll();
 	  
-	  void update(Integer id, String name);
+	  void update(Test test);
 }
